@@ -9,12 +9,19 @@ import Featured from './components/Featured'
 import Cards from './components/Cards'
 import Start from './components/Start'
 import Footer from './components/Footer'
-import LocomotiveScroll from 'locomotive-scroll';
 
 
 const page = () => {
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll();
+    let locomotiveScroll;
+    
+    // Dynamic import to ensure it only runs on client side
+    const initLocomotiveScroll = async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      locomotiveScroll = new LocomotiveScroll();
+    };
+    
+    initLocomotiveScroll();
     
     return () => {
       if (locomotiveScroll) locomotiveScroll.destroy();
