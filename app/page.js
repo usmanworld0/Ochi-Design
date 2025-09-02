@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from './components/Navbar'
 import Landing from './components/Landing'
 import Marquee from './components/Marquee'
@@ -13,13 +13,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 
 const page = () => {
-  useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll();
-    
-    return () => {
-      if (locomotiveScroll) locomotiveScroll.destroy();
-    };
-  }, []);
+const locomotiveScroll = new LocomotiveScroll();
   return (
     <div className='w-full min-h-screen  text-white bg-zinc-900'>
       <Navbar/>
