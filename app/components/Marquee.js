@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 function Marquee() {
   return (
     <div data-scroll data-scroll-section data-scroll-speed=".1" className='w-full py-6 sm:py-8 md:py-12 lg:py-16 xl:py-24 bg-[#004d43] border-zinc-500 rounded-t-xl sm:rounded-t-2xl'>

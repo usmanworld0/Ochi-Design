@@ -1,5 +1,5 @@
 'use client'
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import React, { useState } from 'react'
 import { FaCircle } from "react-icons/fa";
 
